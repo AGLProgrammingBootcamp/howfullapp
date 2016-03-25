@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Store Detabases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Store</th>
+      <th>Location</th>
+      <th>Smorkingornot</th>
+      <th>Capacity</th>
+      <th>Filled seat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @store_detabases.each do |store_detabasis| %>
+      <tr>
+        <td><%= store_detabasis.store %></td>
+        <td><%= store_detabasis.location %></td>
+        <td><%= store_detabasis.smorkingornot %></td>
+        <td><%= store_detabasis.capacity %></td>
+        <td><%= store_detabasis.filled_seat %></td>
+        <td><%= link_to 'Show', store_detabasis %></td>
+        <td><%= link_to 'Edit', edit_store_detabasis_path(store_detabasis) %></td>
+        <td><%= link_to 'Destroy', store_detabasis, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Store detabase', new_store_detabasis_path %>
