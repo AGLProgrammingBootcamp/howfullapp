@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store: MyString
+  location: MyString
+  smorkingornot: MyString
+  capacity: MyString
+  filled_seat: 1
+
+two:
+  store: MyString
+  location: MyString
+  smorkingornot: MyString
+  capacity: MyString
+  filled_seat: 1

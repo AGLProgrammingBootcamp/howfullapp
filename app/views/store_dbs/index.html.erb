@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Store Dbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Store</th>
+      <th>Location</th>
+      <th>Smorkingornot</th>
+      <th>Seats</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @store_dbs.each do |store_db| %>
+      <tr>
+        <td><%= store_db.store %></td>
+        <td><%= store_db.location %></td>
+        <td><%= store_db.smorkingornot %></td>
+        <td><%= store_db.seats %></td>
+        <td><%= link_to 'Show', store_db %></td>
+        <td><%= link_to 'Edit', edit_store_db_path(store_db) %></td>
+        <td><%= link_to 'Destroy', store_db, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Store db', new_store_db_path %>
