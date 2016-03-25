@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  get 'home/sensor'
+  get 'counter/count'
+
+  get 'home/leave_sensor'
+
+  get 'home/leave_sensor'
+
+  get 'home/enter_sensor'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
