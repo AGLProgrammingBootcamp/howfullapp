@@ -4,7 +4,7 @@ class Store::CavesController < ApplicationController
   # GET /store/caves
   # GET /store/caves.json
   def index
-    @store_caves = :Cafe.all
+    @store_caves = Cafe.all
   end
 
   # GET /store/caves/1
