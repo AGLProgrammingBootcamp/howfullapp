@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :caves
+  
+  namespace :store do
+    resources :caves
+  end
+
   get 'home/sensor'
 
   # The priority is based upon order of creation: first created -> highest priority.
