@@ -1,9 +1,9 @@
 <h2>現在の入店客数</h2>
-<p><%= EnterCounter.count - LeaveCounter.count %></p>
+<p><%= @enter_count.entercount - @leave_count.leavecount %></p>
 <h2>今日の総入店客数</h2>
-<p><%= EnterCounter.count%></p>
+<p><%= @enter_count.entercount %></p>
 <h2>今日の退店客数</h2>
-<p><%= LeaveCounter.count %></p>
+<p><%= @leave_count.leavecount %></p>
 
 
 
