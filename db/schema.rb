@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325123712) do
+ActiveRecord::Schema.define(version: 20160325094702) do
 
   create_table "counters", force: :cascade do |t|
     t.integer  "enter"
@@ -65,12 +65,6 @@ ActiveRecord::Schema.define(version: 20160325123712) do
 
   create_table "leave_counters", force: :cascade do |t|
     t.integer  "leave"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "notes", force: :cascade do |t|
-    t.integer  "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
