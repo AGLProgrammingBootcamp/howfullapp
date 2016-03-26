@@ -15,6 +15,7 @@ class CavesController < ApplicationController
   # GET /caves/new
   def new
     @cafe = Cafe.new
+    @stores = Store.all
   end
 
   # GET /caves/1/edit
@@ -69,6 +70,6 @@ class CavesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cafe_params
-      params.require(:cafe).permit(:name, :location, :smoking, :seat)
+      params.require(:cafe).permit(:name, :location, :smoking, :seat ,:store_id)
     end
 end
