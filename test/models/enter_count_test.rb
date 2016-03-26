@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class LeaveCounterTest < ActiveSupport::TestCase
+class EnterCountTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

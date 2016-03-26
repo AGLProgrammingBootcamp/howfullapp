@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160326003456) do
+ActiveRecord::Schema.define(version: 20160326075326) do
 
   create_table "caves", force: :cascade do |t|
     t.string   "name"
@@ -41,6 +41,13 @@ ActiveRecord::Schema.define(version: 20160326003456) do
     t.integer  "enter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "enter_counts", force: :cascade do |t|
+    t.integer  "cafe_id"
+    t.integer  "entercount", default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "impressions", force: :cascade do |t|
@@ -76,6 +83,19 @@ ActiveRecord::Schema.define(version: 20160326003456) do
 
   create_table "leave_counters", force: :cascade do |t|
     t.integer  "leave"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "leave_counts", force: :cascade do |t|
+    t.integer  "cafe_id"
+    t.integer  "leavecount", default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.integer  "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

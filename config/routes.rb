@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  get 'counter/count'
-  get 'home/sensor'
-  get 'home/leave_sensor'
-  get 'home/enter_sensor'
+ 
 
-  resources :caves
+  resources :caves do 
+    get 'counter', to: 'counter#count'
+    get 'enter_sensor', to: 'home#enter_sensor' 
+    get 'leave_sensor', to: 'home#leave_sensor'
+  end
+  
   namespace :store do
     resources :caves
   end
