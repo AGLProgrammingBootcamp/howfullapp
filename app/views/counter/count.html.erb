@@ -1,7 +1,7 @@
 <h2>入客数</h2>
-<p><%= @enter_counter.id %></p>
+<p><%= EnterCounter.count%></p>
 <h2>退客数</h2>
-<p><%= @leave_counter.id %></p>
+<p><%= LeaveCounter.count %></p>
 <h2>占有数</h2>
-<p><%= @enter_counter.id - @leave_counter.id %></p>
+<p><%= EnterCounter.count - LeaveCounter.count %></p>
 
