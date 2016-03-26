@@ -10,9 +10,7 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.collection_select(:store_id,@stores || [], :id, :id) %>
-  </div>
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -28,6 +26,10 @@
   <div class="field">
     <%= f.label :seat %><br>
     <%= f.number_field :seat %>
+  </div>
+  <div class="field">
+    <%= f.label :station %><br>
+    <%= f.text_field :station %>
   </div>
   <div class="actions">
     <%= f.submit %>

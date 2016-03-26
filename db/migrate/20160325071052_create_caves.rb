@@ -5,7 +5,7 @@ class CreateCaves < ActiveRecord::Migration
       t.string :location
       t.boolean :smoking
       t.integer :seat
-      t.integer :occn
+      t.integer :occ
       t.timestamps null: false
     end
   end

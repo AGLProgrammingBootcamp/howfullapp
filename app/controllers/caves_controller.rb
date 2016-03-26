@@ -5,6 +5,7 @@ class CavesController < ApplicationController
   # GET /caves.json
   def index
     @caves = Cafe.all
+     
   end
 
   # GET /caves/1
@@ -16,6 +17,7 @@ class CavesController < ApplicationController
   def new
     @cafe = Cafe.new
     @stores = Store.all
+    
   end
 
   # GET /caves/1/edit
@@ -61,7 +63,13 @@ class CavesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  def find
+     @caves = Cafe.all
+     @q = Cafe.ransack(params[:q])
+     @caves = @q.result
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cafe
@@ -70,6 +78,7 @@ class CavesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cafe_params
-      params.require(:cafe).permit(:name, :location, :smoking, :seat ,:store_id)
+      params.require(:cafe).permit(:name, :location, :smoking, :seat ,:store_id ,:station)
     end
+    
 end

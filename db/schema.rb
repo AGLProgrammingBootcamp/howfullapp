@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20160326075326) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "store_id"
+    t.integer  "occ"
+    t.string   "station"
   end
 
   create_table "counters", force: :cascade do |t|
@@ -92,12 +94,6 @@ ActiveRecord::Schema.define(version: 20160326075326) do
     t.integer  "leavecount", default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-  end
-
-  create_table "notes", force: :cascade do |t|
-    t.integer  "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "stores", force: :cascade do |t|
