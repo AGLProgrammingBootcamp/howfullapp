@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Store Caves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @store_caves.each do |store_cafe| %>
+      <tr>
+        <td><%= link_to 'Show', store_cafe %></td>
+        <td><%= link_to 'Edit', edit_store_cafe_path(store_cafe) %></td>
+        <td><%= link_to 'Destroy', store_cafe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cafe', new_store_cafe_path %>

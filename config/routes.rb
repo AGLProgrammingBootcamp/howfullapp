@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   get 'counter/count'
-
+  get 'home/sensor'
   get 'home/leave_sensor'
-
-  get 'home/leave_sensor'
-
   get 'home/enter_sensor'
+
+  resources :caves
+  namespace :store do
+    resources :caves
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
