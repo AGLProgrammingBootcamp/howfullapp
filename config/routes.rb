@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'cafe/find'=> 'caves#find'
   resources :caves
-  
   namespace :store do
     resources :caves
+   
   end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
