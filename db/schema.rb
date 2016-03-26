@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325094702) do
+ActiveRecord::Schema.define(version: 20160326003456) do
+
+  create_table "caves", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.boolean  "smoking"
+    t.integer  "seat"
+    t.integer  "occn"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "store_id"
+  end
 
   create_table "counters", force: :cascade do |t|
     t.integer  "enter"
@@ -65,6 +76,11 @@ ActiveRecord::Schema.define(version: 20160325094702) do
 
   create_table "leave_counters", force: :cascade do |t|
     t.integer  "leave"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stores", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
