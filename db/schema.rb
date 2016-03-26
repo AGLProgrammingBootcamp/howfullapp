@@ -18,31 +18,11 @@ ActiveRecord::Schema.define(version: 20160326075326) do
     t.string   "location"
     t.boolean  "smoking"
     t.integer  "seat"
-    t.integer  "occn"
+    t.integer  "occ"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "store_id"
-    t.integer  "occ"
     t.string   "station"
-  end
-
-  create_table "counters", force: :cascade do |t|
-    t.integer  "enter"
-    t.integer  "leave"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "enter_conters", force: :cascade do |t|
-    t.integer  "enter"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "enter_counters", force: :cascade do |t|
-    t.integer  "enter"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "enter_counts", force: :cascade do |t|
@@ -76,18 +56,6 @@ ActiveRecord::Schema.define(version: 20160326075326) do
   add_index "impressions", ["impressionable_type", "impressionable_id", "session_hash"], name: "poly_session_index"
   add_index "impressions", ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index"
   add_index "impressions", ["user_id"], name: "index_impressions_on_user_id"
-
-  create_table "leave_conters", force: :cascade do |t|
-    t.integer  "leave"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "leave_counters", force: :cascade do |t|
-    t.integer  "leave"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "leave_counts", force: :cascade do |t|
     t.integer  "cafe_id"
