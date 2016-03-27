@@ -83,4 +83,39 @@ class CavesController < ApplicationController
       params.require(:cafe).permit(:name, :location, :smoking, :seat ,:store_id ,:station)
     end
     
+    
+    def create
+    @user = User.new(user_params)
+    file = params[:user][:image]
+    # 以下のコードをset_imageメソッドとしてuser.rbに移し、set_imageメソッドを呼び出してください
+    @user.set_image(file)
+
+    if @user.save
+      redirect_to @user, notice: 'ユーザーが保存されました'
+    else
+      render :new
+    end
+  
+  def update
+    
+     # アップロードされた画像をparams[:user][:image]から受け取り変数fileに代入してください
+    file = params[:caves][:image]
+    # set_imageメソッドを呼び出してください
+    @user.set_image(file)
+    
+    if @caves.update(user_params)
+      redirect_to @caves, notice: '店舗情報が更新されました'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @caves.destroy
+    redirect_to caves_url, notice: '店舗が削除されました'
+  def about us
+  end  
+   end
+   
+   end 
 end
