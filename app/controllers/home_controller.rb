@@ -7,7 +7,7 @@ class HomeController < ApplicationController
   end
   
   def leave_sensor
-    @cafe = Cafe.find(params[:id])
+    @cafe = Cafe.find(params[:cafe_id])
     @leave_count = LeaveCount.find_or_create_by(cafe_id: @cafe.id)
     @leave_count.leavecount += 1;
     @leave_count.save
