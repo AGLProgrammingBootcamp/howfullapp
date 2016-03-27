@@ -15,22 +15,30 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+  
   <div class="field">
     <%= f.label :location %><br>
     <%= f.text_field :location %>
   </div>
+  
   <div class="field">
     <%= f.label :smoking %><br>
     <%= f.check_box :smoking %>
   </div>
+  
   <div class="field">
     <%= f.label :seat %><br>
     <%= f.number_field :seat %>
   </div>
+  
   <div class="field">
     <%= f.label :station %><br>
     <%= f.text_field :station %>
   </div>
+  
+  
+  プロフィール画像
+  <%= f.file_field :image, class: "form-control image-field" %>
   <div class="actions">
     <%= f.submit %>
   </div>

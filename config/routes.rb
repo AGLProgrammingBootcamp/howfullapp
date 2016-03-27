@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :caves do 
     get 'counter', to: 'counter#count'
+    get '/about_us' =>'caves#about_us'
     get 'enter_sensor', to: 'home#enter_sensor' 
     get 'leave_sensor', to: 'home#leave_sensor'
   end

@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
+<body>
+ <head>
   <title>Workspace</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
+ </head>
+ 
+  <header>
+    <div class="container">
+     <h1> はうふる。</h1>
+      <div class="header-left">
+       
+      </div>
+      
+      <div class="header-right">
+       
+      </div>
+    </div>
+  </header>
 
-<h1>はうふる。</h1>　
-<body style="background-color:#5c9291;">
-<p>リアルタイムに空席情報を提供</p>
-<%= yield %>
+
+
+  
+  <body style="background-color:#5c9291;">
+  
+
+<div>
+   
+</div>
+ <%= yield %>
+ <footer>
+   
+  <footer-left>
+    <ul>
+    <li> <a href="https://how-fulldesign-voyage525.c9users.io/cafe/find" class="cafe_register">about my team</a> </li>
+      <li> <li> <a href="https://how-fulldesign-voyage525.c9users.io/cafe/find" class="cafe_register">about my team</a> </li></li>
+    </ul>
+  </footer-left>
+  
+ </footer>
 
 </body>
 </html>
