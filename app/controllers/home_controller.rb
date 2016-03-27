@@ -12,4 +12,14 @@ class HomeController < ApplicationController
     @leave_count.leavecount += 1;
     @leave_count.save
   end
+  
+  
+  def top
+  end
+  
+  def contact
+  end
+  
+  def aboutus
+  end
 end

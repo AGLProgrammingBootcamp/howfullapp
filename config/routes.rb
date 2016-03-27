@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   get 'cafe/find'=> 'caves#find'
+  
+  get '/top' => 'home#top'
+  get '/contact' => 'home#contact'
+  get '/aboutus' => 'home#aboutus'
 
   resources :caves do 
     get 'counter', to: 'counter#count'
+    get '/about_us' =>'caves#about_us'
     get 'enter_sensor', to: 'home#enter_sensor' 
     get 'leave_sensor', to: 'home#leave_sensor'
   end
