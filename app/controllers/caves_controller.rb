@@ -68,6 +68,8 @@ class CavesController < ApplicationController
      @caves = Cafe.all
      @q = Cafe.ransack(params[:q])
      @caves = @q.result
+    # @enter_count = EnterCount.find_by(cafe_id: @caves.id)
+    # @leave_count = LeaveCount.find_by(cafe_id: @caves.id)
   end
   
   private
