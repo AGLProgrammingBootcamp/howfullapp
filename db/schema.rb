@@ -64,6 +64,12 @@ ActiveRecord::Schema.define(version: 20160327003944) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "notes", force: :cascade do |t|
+    t.integer  "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "stores", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
